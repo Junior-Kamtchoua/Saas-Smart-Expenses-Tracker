@@ -79,6 +79,7 @@ export default function HomePage() {
 
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-32 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        {/* LEFT */}
         <div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
             Take Control of <br />
@@ -98,53 +99,31 @@ export default function HomePage() {
               Get Started
             </Link>
 
+            {/* 🔥 ATTRACTIVE WATCH DEMO BUTTON */}
             <button
               onClick={() => setShowDemo(true)}
               className="
-    relative
-    group
-    flex items-center gap-3
-    px-6 py-3.5
-    rounded-xl
-    font-semibold
-    text-blue-700
-    bg-white
-    border border-blue-200
-    shadow-md
-    hover:shadow-xl
-    hover:-translate-y-0.5
-    transition-all duration-300
-    overflow-hidden
-  "
+                relative group
+                flex items-center gap-3
+                px-6 py-3.5
+                rounded-xl
+                font-semibold
+                text-blue-700
+                bg-white
+                border border-blue-200
+                shadow-md
+                hover:shadow-xl
+                hover:-translate-y-0.5
+                transition-all duration-300
+                overflow-hidden
+              "
             >
-              {/* Glow effect */}
-              <span
-                className="
-      absolute inset-0
-      bg-linear-to-r from-blue-500/20 via-sky-400/20 to-blue-500/20
-      opacity-0 group-hover:opacity-100
-      transition-opacity duration-300
-    "
-              />
+              <span className="absolute inset-0 bg-linear-to-r from-blue-500/20 via-sky-400/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-              {/* Play icon */}
-              <span
-                className="
-      relative z-10
-      w-9 h-9
-      rounded-full
-      bg-blue-600
-      text-white
-      flex items-center justify-center
-      shadow-md
-      group-hover:scale-110
-      transition-transform
-    "
-              >
+              <span className="relative z-10 w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
                 ▶
               </span>
 
-              {/* Text */}
               <span className="relative z-10">Watch Demo</span>
             </button>
           </div>
@@ -225,21 +204,10 @@ export default function HomePage() {
         </p>
       </footer>
 
-      {/* DEMO MODAL*/}
+      {/* 🎬 DEMO MODAL — RESPONSIVE */}
       {showDemo && (
         <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
-          <div
-            className="
-              relative
-              w-full
-              h-full
-              sm:h-auto
-              sm:max-w-4xl
-              bg-black
-              rounded-none sm:rounded-xl
-              overflow-hidden
-            "
-          >
+          <div className="relative w-full h-full sm:h-auto sm:max-w-4xl bg-black rounded-none sm:rounded-xl overflow-hidden">
             <button
               onClick={() => setShowDemo(false)}
               className="absolute top-3 right-3 z-10 bg-white text-black rounded-full w-9 h-9 flex items-center justify-center font-bold"
