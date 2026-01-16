@@ -14,7 +14,23 @@ export default function Sidebar() {
     }`;
 
   return (
-    <aside className="w-64 bg-white border-r border-gray-200 p-6 hidden md:block">
+    <aside
+      className="
+        w-64
+        bg-white
+        border-r border-gray-200
+        p-6
+        h-screen
+        fixed
+        top-0
+        left-0
+        z-40
+        overflow-y-auto
+        md:static
+        md:h-auto
+        md:block
+      "
+    >
       <div className="flex items-center gap-2 mb-10">
         <div className="w-8 h-8 bg-blue-600 rounded-md" />
         <span className="font-semibold text-lg text-gray-800">
