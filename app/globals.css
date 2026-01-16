@@ -77,7 +77,6 @@ body {
     transform: rotate(360deg);
   }
 }
-
 /* Infinite horizontal scroll */
 
 .logo-scroll {
@@ -85,23 +84,40 @@ body {
   width: 100%;
 }
 
+/* Track */
 .logo-track {
   display: flex;
   width: 200%;
   animation: scroll-left 30s linear infinite;
 }
 
+/* Group */
 .logo-group {
   display: flex;
   width: 50%;
 }
 
+/* Item */
 .logo-item {
+  flex: 0 0 auto;
+  min-width: 120px;
+  text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #9ca3af; /* gray-400 */
+  color: #9ca3af;
   white-space: nowrap;
-  margin-right: 3rem;
+}
+
+/* Mobile fix */
+@media (max-width: 640px) {
+  .logo-item {
+    min-width: 90px;
+    font-size: 0.875rem;
+  }
+
+  .logo-group {
+    gap: 1rem;
+  }
 }
 
 /* Dark mode */
