@@ -42,6 +42,22 @@ register
 components/ Sidebar.tsx Header.tsx  
 lib/ supabase.ts getUser.ts
 
+\*\* How to Use the Application
+
+Open the landing page
+
+Click Get Started
+
+Create an account (Sign Up)
+
+Confirm your email address (Supabase email verification)
+
+Log in with your credentials
+
+You are redirected to the Dashboard
+
+Start adding expenses, setting budgets, and viewing analytics
+
 ## Notes
 
 This project focuses on clean architecture, real authentication flow, responsive UI, and practical data visualization.

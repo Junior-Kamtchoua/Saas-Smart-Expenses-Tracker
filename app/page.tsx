@@ -40,7 +40,6 @@ export default function HomePage() {
       <header className="sticky top-4 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between rounded-2xl bg-white/90 backdrop-blur-md shadow-lg border border-gray-200 px-5 py-4">
-            {/* Logo */}
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 bg-blue-600 rounded-xl" />
               <span className="font-semibold text-base sm:text-lg text-gray-900">
@@ -48,7 +47,6 @@ export default function HomePage() {
               </span>
             </div>
 
-            {/* Navigation */}
             <nav className="hidden md:flex items-center gap-10 text-gray-700 font-medium">
               <a href="#features" className="hover:text-gray-900 transition">
                 Features
@@ -61,7 +59,6 @@ export default function HomePage() {
               </a>
             </nav>
 
-            {/* Actions */}
             <div className="flex items-center gap-4">
               <a
                 href="/login"
@@ -69,7 +66,6 @@ export default function HomePage() {
               >
                 Log In
               </a>
-              <span> </span>
               <a
                 href="/register"
                 className="bg-blue-600 text-white px-5 py-2.5 rounded-xl font-semibold shadow-md hover:bg-blue-700 transition"
@@ -83,7 +79,6 @@ export default function HomePage() {
 
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-32 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-        {/* LEFT */}
         <div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
             Take Control of <br />
@@ -105,9 +100,52 @@ export default function HomePage() {
 
             <button
               onClick={() => setShowDemo(true)}
-              className="border border-gray-400 text-gray-800 px-5 py-3 rounded-lg flex items-center gap-2 hover:bg-gray-200 transition"
+              className="
+    relative
+    group
+    flex items-center gap-3
+    px-6 py-3.5
+    rounded-xl
+    font-semibold
+    text-blue-700
+    bg-white
+    border border-blue-200
+    shadow-md
+    hover:shadow-xl
+    hover:-translate-y-0.5
+    transition-all duration-300
+    overflow-hidden
+  "
             >
-              ▶ Watch Demo
+              {/* Glow effect */}
+              <span
+                className="
+      absolute inset-0
+      bg-linear-to-r from-blue-500/20 via-sky-400/20 to-blue-500/20
+      opacity-0 group-hover:opacity-100
+      transition-opacity duration-300
+    "
+              />
+
+              {/* Play icon */}
+              <span
+                className="
+      relative z-10
+      w-9 h-9
+      rounded-full
+      bg-blue-600
+      text-white
+      flex items-center justify-center
+      shadow-md
+      group-hover:scale-110
+      transition-transform
+    "
+              >
+                ▶
+              </span>
+
+              {/* Text */}
+              <span className="relative z-10">Watch Demo</span>
             </button>
           </div>
 
@@ -116,7 +154,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* RIGHT */}
+        {/* RIGHT CARD */}
         <div className="relative flex items-center justify-center">
           <div className="relative z-10 bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-10 border border-white/60 w-full max-w-md">
             <div className="grid grid-cols-2 gap-4">
@@ -141,7 +179,6 @@ export default function HomePage() {
                       <Pie
                         data={expenseBreakdownData}
                         dataKey="value"
-                        nameKey="name"
                         outerRadius={60}
                       >
                         {expenseBreakdownData.map((entry, index) => (
@@ -181,50 +218,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="relative py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-            <video
-              className="absolute inset-0 w-full h-full object-cover"
-              src="/videos/money.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-            <div className="absolute inset-0 bg-blue-600/40" />
-
-            <div className="relative z-10 text-center px-6 py-24 text-white">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-                Ready to take control of your finances?
-              </h2>
-
-              <p className="mt-6 text-base sm:text-lg text-blue-50 max-w-2xl mx-auto">
-                Join thousands of users who already manage their money smarter.
-                Start today — no credit card required.
-              </p>
-
-              <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                <a
-                  href="/register"
-                  className="bg-white text-blue-600 font-semibold px-8 py-4 rounded-xl hover:bg-blue-50 transition"
-                >
-                  Get Started Free
-                </a>
-
-                <a
-                  href="#"
-                  className="border border-white/50 px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition"
-                >
-                  Contact Sales
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FOOTER */}
       <footer className="border-t border-gray-200 py-10">
         <p className="text-center text-sm text-gray-600">
@@ -232,10 +225,21 @@ export default function HomePage() {
         </p>
       </footer>
 
-      {/* DEMO MODAL */}
+      {/* DEMO MODAL*/}
       {showDemo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
-          <div className="relative w-full max-w-4xl bg-black rounded-xl overflow-hidden">
+        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
+          <div
+            className="
+              relative
+              w-full
+              h-full
+              sm:h-auto
+              sm:max-w-4xl
+              bg-black
+              rounded-none sm:rounded-xl
+              overflow-hidden
+            "
+          >
             <button
               onClick={() => setShowDemo(false)}
               className="absolute top-3 right-3 z-10 bg-white text-black rounded-full w-9 h-9 flex items-center justify-center font-bold"
@@ -247,7 +251,8 @@ export default function HomePage() {
               src="/videos/demo.mp4"
               controls
               autoPlay
-              className="w-full h-[70vh] object-cover"
+              playsInline
+              className="w-full h-full max-h-screen object-contain bg-black"
             />
           </div>
         </div>

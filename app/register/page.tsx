@@ -56,9 +56,19 @@ export default function SignupPage() {
               id="email"
               type="email"
               placeholder="you@example.com"
-              className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className="
+                w-full
+                rounded-lg
+                px-4 py-3
+                bg-white
+                border-2 border-blue-200
+                focus:border-blue-600
+                focus:ring-4 focus:ring-blue-100
+                outline-none
+                transition
+              "
             />
           </div>
 
@@ -74,9 +84,19 @@ export default function SignupPage() {
               id="password"
               type="password"
               placeholder="Create a password"
-              className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              className="
+                w-full
+                rounded-lg
+                px-4 py-3
+                bg-white
+                border-2 border-blue-200
+                focus:border-blue-600
+                focus:ring-4 focus:ring-blue-100
+                outline-none
+                transition
+              "
             />
           </div>
 
@@ -84,7 +104,16 @@ export default function SignupPage() {
 
           <button
             onClick={handleSignup}
-            className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+            className="
+              w-full
+              bg-blue-600
+              text-white
+              py-3
+              rounded-lg
+              font-semibold
+              hover:bg-blue-700
+              transition
+            "
           >
             Sign Up
           </button>
